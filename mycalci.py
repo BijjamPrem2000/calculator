@@ -22,7 +22,7 @@ button_texts = [
     '7', '8', '9', '/',
     '4', '5', '6', '*',
     '1', '2', '3', '-',
-    '0', '.', '=', '+'
+    '0', '.', '+', '='
 ]
 
 row_num, col_num = 1, 0
@@ -34,7 +34,7 @@ for text in button_texts:
     else:
         tk.Button(window, text=text, command=lambda t=text: entry.insert(tk.END, t)).grid(row=row_num, column=col_num)
     col_num += 1
-    if col_num > 4:
+    if col_num > 3:
         col_num = 0
         row_num += 1
 
